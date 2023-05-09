@@ -18,14 +18,3 @@ ORDER BY albums.Title;
 $statement = $dbcon->prepare($sql);
 $statement->execute([$artistId]);
 $artist = $statement-> fetchAll(PDO::FETCH_ASSOC);
-
-$list = array(
-    "artist" => $artist["Name"],
-    "albums" => array()
-);
-$current_album = null;
-foreach($albums as $album ){
-    if($current_album !== $album["album_title"]){
-        $result
-    }
-};
