@@ -14,4 +14,9 @@ VALUES (?,?)";
 
 $statement = $dbcon->prepare($sql);
 
-$statement->execute(array());
+foreach ($data as $artist) {
+    $statement->execute(array(
+        $artist-> ArtistId,
+        $artist->Name
+    ));
+}
